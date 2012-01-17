@@ -1,0 +1,27 @@
+DEFAULTS: &DEFAULTS
+  adapter: mongodb
+
+development:
+  <<: *DEFAULTS
+  database: carbon_calculated_development
+    
+test:
+  <<: *DEFAULTS
+  database: cmeasure_test
+
+staging:
+  <<: *DEFAULTS
+  database: carbon_calculated_staging
+  host: arrow.mongohq.com
+  port: 27069
+  username: d50
+  password: 80shour2
+
+production:
+  <<: *DEFAULTS
+  database: carbon_calculated_production_large
+  host: swan.mongohq.com
+  port: 27046
+  username: d50
+  password: 80shour2
+
